@@ -5,7 +5,6 @@ import com.google.api.services.drive.model.File;
 import com.google.api.services.drive.model.FileList;
 import com.opensymphony.xwork2.ActionSupport;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -14,6 +13,7 @@ public class GoogleDrive extends ActionSupport {
 
     private List<File> files;
     private Map<String,String> fileNames = new HashMap<>();
+    public static String msg = null;
 
     public Map<String, String> getFileNames() {
         return fileNames;
@@ -21,6 +21,14 @@ public class GoogleDrive extends ActionSupport {
 
     public void setFileNames(Map<String, String> fileNames) {
         this.fileNames = fileNames;
+    }
+    
+    public String getMsg() {
+        return msg;
+    }
+
+    public void setMsg(String msg) {
+        this.msg = msg;
     }
     
     public String getSpreadsheets() throws IOException {

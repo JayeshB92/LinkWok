@@ -17,6 +17,6 @@
             <s:select label="Select a File" list="%{fileNames}" name="fileId" headerKey="" disabled="disabled" headerValue="Select File" required="true"/><br>
             <button type="submit">Get MailIds</button>
         </form>
-        
+            <h3><s:property value="msg"/></h3>
     </body>
 </html>
