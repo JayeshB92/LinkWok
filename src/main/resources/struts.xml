@@ -1,0 +1,22 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<!-- Author: JayeshB -->
+ 
+<struts>
+    <!-- Add your configuration elements here -->
+    <package name="default" namespace="/" extends="struts-default">
+        
+        <action name="connect" class="google.GoogleDrive" method="getSpreadsheets">
+            <result name="success">drivefiles.jsp</result>
+        </action>
+        
+        <action name="loadSheetsData" class="google.GoogleSheets" method="fetchMailIds">
+            <result name="success">index.jsp</result>
+            <result name="error">index.jsp</result>
+        </action>
+        
+    </package>
+    
+</struts>
