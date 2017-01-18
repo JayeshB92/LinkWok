@@ -27,7 +27,6 @@ public class GoogleSheets extends ActionSupport {
         // Prints the names and majors of students in a sample spreadsheet:
         // https://docs.google.com/spreadsheets/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms/edit
         String spreadsheetId = fileId;
-        System.out.println("spreadsheetId-------------------->" + spreadsheetId);
         String range = "A1:ZZZ";
         String majorDimension = "COLUMNS";
         ValueRange response = service.spreadsheets().values()
